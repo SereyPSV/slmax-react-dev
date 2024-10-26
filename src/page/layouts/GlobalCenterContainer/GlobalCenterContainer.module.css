@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("/public/fonts/Manrope.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.globalCenterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "MyFont", sans-serif;
+}
+
+.contentContainer {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 20px;
+}
