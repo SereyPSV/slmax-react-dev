@@ -1,0 +1,40 @@
+.nav {
+  /* background-color: #333; */
+  padding: 20px;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navItem:hover {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.navLink {
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import { GlobalCenterContainer } from "src/page/layouts";
+import NavigationMenu from "./widgets/Navigation/NavigationMenu";
 
 export const metadata: Metadata = {
   title: "SLMax - React Разработчик",
@@ -16,7 +17,10 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body>
-        <GlobalCenterContainer>{children}</GlobalCenterContainer>
+        <GlobalCenterContainer>
+          <NavigationMenu />
+          {children}
+        </GlobalCenterContainer>
       </body>
     </html>
   );

@@ -8,13 +8,14 @@
 .globalCenterContainer {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   font-family: "MyFont", sans-serif;
+  background-color: #dddddd;
+  color: #111111;
 }
 
 .contentContainer {
   max-width: 1440px;
   width: 100%;
-  padding: 0 20px;
+  padding: 20px;
 }
