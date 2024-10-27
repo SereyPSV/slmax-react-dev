@@ -9,11 +9,14 @@ interface IProductPageParams {
 export const ProductPage: FC<IProductPageParams> = async ({ productId }) => {
   const product = await getProductById(productId);
 
-  console.log("product", product);
-
   if (!product) {
     return <div>Product not found</div>;
   }
 
-  return <ProductWidget product={product.props.product} />;
+  return (
+    <div>
+      <h2>ProductsPage</h2>
+      <ProductWidget product={product.props.product} />
+    </div>
+  );
 };

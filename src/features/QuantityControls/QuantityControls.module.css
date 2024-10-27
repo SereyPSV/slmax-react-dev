@@ -1,0 +1,35 @@
+.quantitySelector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quantity {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.quantityControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  width: 50px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.input {
+  width: 50px;
+  text-align: center;
+  margin: 0 10px;
+  padding: 5px;
+}
+
+.sendButton {
+  padding: 10px 40px;
+  border-radius: 4px;
+}

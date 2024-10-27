@@ -14,7 +14,7 @@ export const ProductsListWidget: FC<ProductsListWidgetProps> = ({
   return (
     <div className={styles.productsListContainer}>
       {products.map((product: Product) => (
-        <ProductCard key={product.id} {...product} />
+        <ProductCard {...product} />
       ))}
     </div>
   );
