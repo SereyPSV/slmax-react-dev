@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./NavigationMenu.module.css";
 
-const NavigationMenu = () => {
+export const NavigationMenu = () => {
   return (
     <nav className={styles.nav}>
       <ul className={styles.navList}>
@@ -24,5 +24,3 @@ const NavigationMenu = () => {
     </nav>
   );
 };
-
-export default NavigationMenu;

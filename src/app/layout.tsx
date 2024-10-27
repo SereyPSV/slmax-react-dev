@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import { GlobalCenterContainer } from "src/page/layouts";
-import NavigationMenu from "./widgets/Navigation/NavigationMenu";
+import { NavigationMenu } from "src/widgets";
 
 export const metadata: Metadata = {
   title: "SLMax - React Разработчик",
