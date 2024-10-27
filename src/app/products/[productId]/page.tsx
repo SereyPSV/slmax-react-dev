@@ -7,8 +7,14 @@ export interface IProductPageParams {
   };
 }
 
-const ProductPage: FC<IProductPageParams> = ({ params }) => {
-  return <ProductPageComponent params={params} />;
+const ProductPage: FC<IProductPageParams> = async ({ params }) => {
+  const { productId } = await params;
+
+  if (!productId) {
+    return <div>Invalid product ID</div>;
+  }
+
+  return <ProductPageComponent productId={Number(productId)} />;
 };
 
 export default ProductPage;

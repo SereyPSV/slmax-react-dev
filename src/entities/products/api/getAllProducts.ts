@@ -1,4 +1,4 @@
-import { Product } from "./types";
+import { Product } from "src/entities/product/types";
 
 export const getAllProducts = async () => {
   const response = await fetch("http://localhost:3000/api/products");

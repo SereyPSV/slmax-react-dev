@@ -4,17 +4,17 @@ import { ProductCard } from "src/features";
 
 import styles from "./ProductsList.module.css";
 
-interface IProductsListWidgetProps {
+interface ProductsListWidgetProps {
   products: Product[];
 }
 
-export const ProductsListWidget: FC<IProductsListWidgetProps> = ({
+export const ProductsListWidget: FC<ProductsListWidgetProps> = ({
   products,
 }) => {
   return (
     <div className={styles.productsListContainer}>
       {products.map((product: Product) => (
-        <ProductCard {...product} />
+        <ProductCard key={product.id} {...product} />
       ))}
     </div>
   );

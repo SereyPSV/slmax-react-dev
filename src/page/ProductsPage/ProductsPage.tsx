@@ -1,12 +1,13 @@
 import { FC } from "react";
 import { getAllProducts } from "src/entities";
-import { ProductCard } from "src/features";
-
-import styles from "./ProductCardsWidget.module.css";
 import { ProductsListWidget } from "src/widgets";
 
 export const ProductsPage: FC = async () => {
   const allProducts = await getAllProducts();
+
+  if (!allProducts) {
+    return <div>Products not found</div>;
+  }
 
   return (
     <div>
