@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { getProductById } from "src/entities";
+import { getCart, getProductById } from "src/entities";
 import { ProductWidget } from "src/widgets";
 
 interface IProductPageParams {
@@ -8,6 +8,7 @@ interface IProductPageParams {
 
 export const ProductPage: FC<IProductPageParams> = async ({ productId }) => {
   const product = await getProductById(productId);
+  const cart = await getCart();
 
   if (!product) {
     return <div>Product not found</div>;
@@ -16,7 +17,7 @@ export const ProductPage: FC<IProductPageParams> = async ({ productId }) => {
   return (
     <div>
       <h2>ProductsPage</h2>
-      <ProductWidget product={product.props.product} />
+      <ProductWidget product={product.props.product} cart={cart} />
     </div>
   );
 };

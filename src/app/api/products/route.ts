@@ -1,10 +1,13 @@
-import { NextRequest, NextResponse } from "next/server";
-import { products } from "./productsData";
+import { NextResponse } from "next/server";
 
-export async function GET(request: NextRequest) {
-  if (Array.isArray(products)) {
-    return NextResponse.json(products);
-  } else {
-    return NextResponse.json({ error: "Products data is not an array" });
-  }
+export async function GET(request: Request) {
+  const response = await fetch("http://localhost:3030/products", {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  });
+
+  if (!response.ok) throw new Error("Failed to fetch products");
+
+  const products = await response.json();
+  return NextResponse.json(products);
 }

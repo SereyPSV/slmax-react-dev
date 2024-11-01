@@ -12,7 +12,7 @@ export const setCart = async (cartItem: CartItem) => {
     (item) => item.productId === cartItem.productId
   );
   if (itemIndex > -1) {
-    updatedCart[itemIndex].count += cartItem.count;
+    updatedCart[itemIndex].count = cartItem.count;
   } else {
     updatedCart.push(cartItem);
   }
