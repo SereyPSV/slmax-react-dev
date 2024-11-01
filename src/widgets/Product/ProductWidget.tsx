@@ -3,6 +3,7 @@ import { CartItem, Product } from "src/entities";
 import { QuantityControls } from "src/features";
 
 import styles from "./Product.module.css";
+import { formatPrice } from "src/shared/lib";
 
 interface ProductWidgetProps {
   product: Product;
@@ -20,7 +21,7 @@ export const ProductWidget: FC<ProductWidgetProps> = ({ product, cart }) => {
       <div className={styles.productPage}>
         <h1>{product.title}</h1>
         <p>{product.description}</p>
-        <p>Price: ${product.price}</p>
+        <p>Price: {formatPrice(product.price)}</p>
         <QuantityControls product={product} cartItem={cartItem} />
       </div>
     </div>

@@ -13,7 +13,7 @@ export const ProductsPage: FC = async () => {
   return (
     <div>
       <h2>ProductsPage</h2>
-      <ProductsListWidget products={allProducts.props.products} />
+      <ProductsListWidget products={allProducts} />
     </div>
   );
 };

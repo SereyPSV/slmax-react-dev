@@ -17,7 +17,7 @@ export const ProductPage: FC<IProductPageParams> = async ({ productId }) => {
   return (
     <div>
       <h2>ProductsPage</h2>
-      <ProductWidget product={product.props.product} cart={cart} />
+      <ProductWidget product={product} cart={cart} />
     </div>
   );
 };
